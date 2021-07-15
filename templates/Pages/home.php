@@ -67,6 +67,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
 </head>
 <body>
     <header>
