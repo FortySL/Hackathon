@@ -1,0 +1,29 @@
+main .container .purchasenum > input{
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    color:#bbbbbb;
+    border: 1px solid #cecece;
+}
+main .container .purchasenum > input{
+    width:45px;
+    box-sizing: content-box;
+    vertical-align: top;
+    margin-left: -4px;
+    border-left-style: none;
+}
+main .container .purchasenum .plus{
+    margin-left: -4px;
+}
+main .container .sumup{
+    color:#F36B10;
+}
+main .container .operation{
+    cursor: pointer;
+}
+main .container .operation strong:hover{
+    color:#F36B10;
+    text-decoration: underline;
+}

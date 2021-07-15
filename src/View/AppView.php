@@ -37,5 +37,14 @@ class AppView extends View
      */
     public function initialize(): void
     {
+        $formTemplate=[
+            'label' => '<label{{attrs}} class="form-label">{{text}}</label>',
+            'input' => '<input type="{{type}}" name="{{name}}" class="form-control"{{attrs}}/>',
+            'inputContainer' => '<div class="input {{type}}{{required}}">{{content}}</div>',
+            'select' => '<select name="{{name}}" class="form-select" aria-label="Default select example" {{attrs}}>{{content}}</select>',
+            'textarea' => '<textarea name="{{name}}" class="form-control" {{attrs}}>{{value}}</textarea>',
+            'button' => '<button{{attrs}}  class="btn btn-primary">  {{text}}</button>'
+        ];
+        $this->Form->setTemplates($formTemplate);
     }
 }

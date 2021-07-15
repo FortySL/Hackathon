@@ -5,19 +5,10 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Customer'), ['action' => 'edit', $customer->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Customer'), ['action' => 'delete', $customer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Customers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Customer'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
     <div class="column-responsive column-80">
         <div class="customers view content">
             <h3><?= h($customer->id) ?></h3>
-            <table>
+            <table class="table table-bordered">
                 <tr>
                     <th><?= __('Username') ?></th>
                     <td><?= h($customer->username) ?></td>
@@ -35,14 +26,6 @@
                     <td><?= h($customer->email) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($customer->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Review Id') ?></th>
-                    <td><?= $this->Number->format($customer->review_id) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Credit') ?></th>
                     <td><?= $this->Number->format($customer->credit) ?></td>
                 </tr>
@@ -51,7 +34,7 @@
                 <h4><?= __('Related Reviews') ?></h4>
                 <?php if (!empty($customer->reviews)) : ?>
                 <div class="table-responsive">
-                    <table>
+                    <table class="table table-bordered">
                         <tr>
                             <th><?= __('Id') ?></th>
                             <th><?= __('Customer Id') ?></th>
@@ -66,7 +49,6 @@
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Reviews', 'action' => 'view', $reviews->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Reviews', 'action' => 'edit', $reviews->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Reviews', 'action' => 'delete', $reviews->id], ['confirm' => __('Are you sure you want to delete # {0}?', $reviews->id)]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -78,7 +60,7 @@
                 <h4><?= __('Related Posts') ?></h4>
                 <?php if (!empty($customer->posts)) : ?>
                 <div class="table-responsive">
-                    <table>
+                    <table class="table table-bordered">
                         <tr>
                             <th><?= __('Id') ?></th>
                             <th><?= __('Customer Id') ?></th>
@@ -102,9 +84,7 @@
                             <td><?= h($posts->post_created) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Posts', 'action' => 'view', $posts->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Posts', 'action' => 'edit', $posts->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Posts', 'action' => 'delete', $posts->id], ['confirm' => __('Are you sure you want to delete # {0}?', $posts->id)]) ?>
-                            </td>
+                                <?= $this->Html->link(__('Edit'), ['controller' => 'Posts', 'action' => 'edit', $posts->id]) ?>                            </td>
                         </tr>
                         <?php endforeach; ?>
                     </table>
@@ -115,7 +95,7 @@
                 <h4><?= __('Related Requests') ?></h4>
                 <?php if (!empty($customer->requests)) : ?>
                 <div class="table-responsive">
-                    <table>
+                    <table class="table table-bordered">
                         <tr>
                             <th><?= __('Id') ?></th>
                             <th><?= __('Customer Id') ?></th>
@@ -132,7 +112,6 @@
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Requests', 'action' => 'view', $requests->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Requests', 'action' => 'edit', $requests->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Requests', 'action' => 'delete', $requests->id], ['confirm' => __('Are you sure you want to delete # {0}?', $requests->id)]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

@@ -13,7 +13,6 @@ use Cake\ORM\Entity;
  * @property string $password
  * @property string $contact_number
  * @property string $email
- * @property int $review_id
  * @property int $credit
  *
  * @property \App\Model\Entity\Review[] $reviews
@@ -36,7 +35,6 @@ class Customer extends Entity
         'password' => true,
         'contact_number' => true,
         'email' => true,
-        'review_id' => true,
         'credit' => true,
         'reviews' => true,
         'posts' => true,

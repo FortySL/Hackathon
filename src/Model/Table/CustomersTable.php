@@ -46,10 +46,10 @@ class CustomersTable extends Table
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Reviews', [
-            'foreignKey' => 'review_id',
-            'joinType' => 'INNER',
-        ]);
+        // $this->belongsTo('Reviews', [
+        //     'foreignKey' => 'review_id',
+        //     'joinType' => 'INNER',
+        // ]);
         $this->hasMany('Posts', [
             'foreignKey' => 'customer_id',
         ]);
